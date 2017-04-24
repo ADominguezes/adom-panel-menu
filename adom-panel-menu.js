@@ -18,6 +18,10 @@
           this.menu[i].size = 200;
         }
       }
+    },
+
+    _link: function() {
+      this.fire('click-link')
     }
 
   });
