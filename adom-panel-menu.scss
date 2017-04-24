@@ -1,0 +1,48 @@
+:host([hidden]), [hidden] {
+  display: none;
+}
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.panel {
+  display: flex;
+  flex-wrap: wrap;
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+    box-sizing: border-box;
+    &__link {
+      opacity: 0.6;
+      text-decoration: none;
+      font-size: 1.4em;
+      transition: opacity 0.5s ease;
+      &__icon {
+        color: var(--adom-panel-menu-panel-icon-color, #5d5d5d);
+        --iron-icon-width: var(--adom-panel-menu-panel-icon-with, 120px);
+        --iron-icon-height: var(--adom-panel-menu-panel-icon-height, 120px);
+      }
+      &__value {
+        color: var(--adom-panel-menu-panel-value-color, #444444);
+        text-transform: uppercase;
+      }
+    }
+    &__link:hover {
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    &__link:focus {
+      outline:none;
+      opacity: 1;
+    }
+  }
+}

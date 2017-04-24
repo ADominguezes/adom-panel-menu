@@ -1,0 +1,47 @@
+:host([hidden]), [hidden] {
+  display: none; }
+
+:host {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.panel {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .panel__menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1em;
+    text-align: center;
+    box-sizing: border-box; }
+    .panel__menu__link {
+      opacity: 0.6;
+      text-decoration: none;
+      font-size: 1.4em;
+      transition: opacity 0.5s ease; }
+      .panel__menu__link__icon {
+        color: var(--adom-panel-menu-panel-icon-color, #5d5d5d);
+        --iron-icon-width: var(--adom-panel-menu-panel-icon-with, 120px);
+        --iron-icon-height: var(--adom-panel-menu-panel-icon-height, 120px); }
+      .panel__menu__link__value {
+        color: var(--adom-panel-menu-panel-value-color, #444444);
+        text-transform: uppercase; }
+    .panel__menu__link:hover {
+      opacity: 1;
+      transition: opacity 0.5s ease; }
+    .panel__menu__link:focus {
+      outline: none;
+      opacity: 1; }

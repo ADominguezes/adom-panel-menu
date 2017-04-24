@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>adom-panel-menu demo</title>
+
+  <script src="../bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script>
+    window.Polymer = {
+      dom: 'shadow',
+      lazyRegister: 'true',
+      useNativeCSSProperties: 'true'
+    }
+
+  </script>
+
+  <link rel="import" href="../bower_components/iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../bower_components/iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../bower_components/adom-demo/adom-demo.html">
+  <link rel="import" href="../adom-panel-menu.html">
+
+  <style is="custom-style" include="demo-pages-shared-styles">
+    /*Common styles*/
+
+    .component-info {
+      padding: 1em;
+    }
+
+    .adom-panel-menu {
+      color: #3e3e3e;
+    }
+
+    .component-description {
+      color: #999;
+    }
+
+    demo-snippet {
+      --demo-snippet-demo: {
+        display: block;
+      }
+      ;
+    }
+
+  </style>
+</head>
+
+<body>
+  <adom-demo id="demo" option-selected="0">
+    <div>
+      <div class="component-info">
+        <h2 class="adom-panel-menu">Panel with images</h2>
+        <div class="component-description">
+          <p>use src in the attribute menu for add the menu´s images.</p>
+          <p>use size in the attribute menu for set the image´s size, (default value is 200).</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <adom-panel-menu id="component0"></adom-panel-menu>
+          <script>
+            var component0 = document.querySelector("#component0")
+            component0.menu = [{
+                value: "home",
+                src: "http://lorempixel.com/400/400/people/1",
+                size: "300",
+                href: "http://google.com"
+              },
+              {
+                value: "mail",
+                src: "http://lorempixel.com/400/400/people/2",
+                size: "300",
+                href: "http://google.com"
+              },
+              {
+                value: "calendar",
+                src: "http://lorempixel.com/400/400/people/3",
+                size: "300",
+                href: "http://google.com"
+              },
+              {
+                value: "invoice",
+                src: "http://lorempixel.com/400/400/people/4",
+                size: "300",
+                href: "http://google.com"
+              }
+            ]
+
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+    <div>
+      <div class="component-info">
+        <h2 class="adom-panel-menu">Panel with icons</h2>
+        <div class="component-description">
+          <p>use icon in the attribute menu for add the icons images.</p>
+          <p>It´s necesary add an icon pack for use the icons.</p>
+        </div>
+      </div>
+      <demo-snippet>
+        <template>
+          <adom-panel-menu id="component1"></adom-panel-menu>
+          <script>
+            var component1 = document.querySelector("#component1")
+            component1.menu = [{
+                value: "home",
+                icon: "icons:home",
+                href: "http://google.com"
+              },
+              {
+                value: "mail",
+                icon: "icons:mail",
+                href: "http://google.com"
+              },
+              {
+                value: "calendar",
+                icon: "icons:event",
+                href: "http://google.com"
+              },
+              {
+                value: "invoice",
+                icon: "icons:chrome-reader-mode",
+                href: "http://google.com"
+              }
+            ]
+
+          </script>
+        </template>
+      </demo-snippet>
+    </div>
+  </adom-demo>
+  <script>
+    var menu = [{
+        optionName: 'with images'
+      },
+      {
+        optionName: 'with icons'
+      }
+    ];
+    var demo = document.getElementById('demo');
+    demo.optionsMenu = menu;
+
+  </script>
+</body>
+
+</html>

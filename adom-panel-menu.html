@@ -1,0 +1,34 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="bower_components/adom-media/adom-media.html">
+<link rel="import" href="adom-panel-menu-styles.html">
+
+<!--
+`adom-panel-menu`
+A component description
+
+@demo demo/index.html
+-->
+
+<dom-module id="adom-panel-menu">
+  <style include="adom-panel-menu-styles adom-panel-menu-shared-styles"></style>
+  <template>
+    <div class="panel" role="navigation">
+
+      <template is="dom-repeat" items="[[menu]]">
+        <div class="panel__menu">
+          <a href="[[item.href]]" class="panel__menu__link">
+            <adom-media img-src="[[item.src]]" width="[[item.size]]" height="[[item.size]]" class="panel__menu__link__src" fade-in hidden$="[[!item.src]]"></adom-media>
+            <iron-icon class="panel__menu__link__icon" icon="[[item.icon]]" hidden$="[[!item.icon]]"></iron-icon>
+            <div class="panel__menu__link__value">
+              [[item.value]]
+            </div>
+          </a>
+        </div>
+      </template>
+
+    </div>
+
+  </template>
+  <script src="adom-panel-menu.js"></script>
+</dom-module>
