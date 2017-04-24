@@ -1,6 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
-<link rel="import" href="bower_components/adom-media/adom-media.html">
+<link rel="import" href="../adom-media/adom-media.html">
 <link rel="import" href="adom-panel-menu-styles.html">
 
 <!--
@@ -17,7 +17,7 @@ A component description
 
       <template is="dom-repeat" items="[[menu]]">
         <div class="panel__menu">
-          <a href="[[item.href]]" class="panel__menu__link">
+          <a href="[[item.href]]" class="panel__menu__link" on-tap="_link">
             <adom-media img-src="[[item.src]]" width="[[item.size]]" height="[[item.size]]" class="panel__menu__link__src" fade-in hidden$="[[!item.src]]"></adom-media>
             <iron-icon class="panel__menu__link__icon" icon="[[item.icon]]" hidden$="[[!item.icon]]"></iron-icon>
             <div class="panel__menu__link__value">
